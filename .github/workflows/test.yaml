@@ -2,7 +2,7 @@
 name: Test Dockerfile build
 on: push
   jobs:
-    Test build:
+    test_build:
       runs-on: ubuntu-latest
       steps:
       - name: Checkout Files
