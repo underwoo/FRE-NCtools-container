@@ -1,0 +1,11 @@
+## test successful build from file
+name: Test Dockerfile build
+on: push
+  jobs:
+    Test build:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Checkout Files
+        uses: actions/checkout@v2
+      - name: Build image
+        run: docker build .
