@@ -24,7 +24,7 @@ LABEL copyright="2021 GFDL"
 LABEL license="LGPL v3+"
 LABEL gov.noaa.gfdl.version="2.0.0"
 LABEL vendor="Geophysical Fluid Dynamics Laboratory"
-LABEL gov.noaa.gfdl.release-date="2022-03-10"
+LABEL gov.noaa.gfdl.release-date="2021-03-10"
 
 ## install fre-nctools dependencies
 RUN apt-get update \
