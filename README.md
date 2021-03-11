@@ -2,8 +2,15 @@
 
 Recipefile and associated container used for the CI testing of the 
 [FRE-NCtools repository](github.com/NOAA-GFDL/FRE-NCtools). Container is based
-on Ubuntu Xenial and includes all the required libraries for building and running
+on Ubuntu Focal and includes all the required libraries for building and running
 the FRE-NCtools test suite.
+
+# Support
+
+At this time, the container(s) in this repository are used for internal testing
+of [NOAA-GFDL/FRE-NCtools](https://github.com/NOAA-GFDL/FRE-NCtools).  Use of the
+containers outside this purpose is not recommended.  Any support requested will
+be dealt on a best-efforts basis.
 
 # Disclaimer
 
