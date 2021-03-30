@@ -40,5 +40,5 @@ RUN apt-get update \
     make \
     nccmp \
     netcdf-bin \
-    openmpi-bin
-
+    openmpi-bin \
+    python
