@@ -41,4 +41,5 @@ RUN apt-get update \
     nccmp \
     netcdf-bin \
     openmpi-bin \
-    python
+    python \
+    python3-netcdf4
