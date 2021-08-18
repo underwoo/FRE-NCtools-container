@@ -34,6 +34,7 @@ RUN apt-get update \
     autoconf \
     bats \
     gfortran \
+    git \
     libnetcdf-dev \
     libnetcdff-dev \
     libopenmpi-dev \
