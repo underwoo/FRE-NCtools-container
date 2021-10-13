@@ -37,10 +37,10 @@ RUN apt-get update \
     git \
     libnetcdf-dev \
     libnetcdff-dev \
-    libopenmpi-dev \
     make \
     nccmp \
     netcdf-bin \
-    openmpi-bin \
     python \
-    python3-netcdf4
+    python3-netcdf4 \
+    mpich \
+    libmpich-dev
