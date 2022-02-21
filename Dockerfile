@@ -20,11 +20,11 @@
 
 FROM ubuntu:focal
 LABEL maintainer="Seth Underwood <Seth.Underwood@noaa.gov>"
-LABEL copyright="2021 GFDL"
+LABEL copyright="2021, 2022 GFDL"
 LABEL license="LGPL v3+"
-LABEL gov.noaa.gfdl.version="2.0.0"
+LABEL gov.noaa.gfdl.version="3.0.0"
 LABEL vendor="Geophysical Fluid Dynamics Laboratory"
-LABEL gov.noaa.gfdl.release-date="2021-03-10"
+LABEL gov.noaa.gfdl.release-date="2022-02-20"
 
 ## install fre-nctools dependencies
 RUN apt-get update \
@@ -42,5 +42,10 @@ RUN apt-get update \
     netcdf-bin \
     python \
     python3-netcdf4 \
+    python3-numpy \
+    python3-pip \
+    python3-pytest \
+    python3-venv \
     mpich \
-    libmpich-dev
+    libmpich-dev \
+ && pip install git+https://github.com/adcroft/numpypi.git
