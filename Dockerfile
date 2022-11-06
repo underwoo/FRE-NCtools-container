@@ -18,13 +18,14 @@
 # <http://www.gnu.org/licenses/>.
 #***********************************************************************
 
-FROM ubuntu:focal
-LABEL maintainer="Seth Underwood <Seth.Underwood@noaa.gov>"
+FROM ubuntu:22.04
+LABEL maintainer="@underwoo"
 LABEL copyright="2021, 2022 GFDL"
 LABEL license="LGPL v3+"
-LABEL gov.noaa.gfdl.version="3.0.0"
 LABEL vendor="Geophysical Fluid Dynamics Laboratory"
-LABEL gov.noaa.gfdl.release-date="2022-02-20"
+LABEL gov.noaa.gfdl.ubuntu.version="2022.04"
+LABEL gov.noaa.gfdl.version="4.0.0"
+LABEL gov.noaa.gfdl.release-date="2022-11-06"
 
 ## install fre-nctools dependencies
 RUN apt-get update \
