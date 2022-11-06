@@ -1,8 +1,9 @@
 ## must be triggered manually to push image
 name: Build and Push Image
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - v*
 
 env:
   REGISTRY: ghcr.io
