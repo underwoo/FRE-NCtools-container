@@ -19,10 +19,12 @@
 #***********************************************************************
 # Ryan Mulhall 2023
 # spack environment config to generate a dockerfile for the fre-nctools ci image.
-# After any updates to generate a new dockerfile you must fill in the template_dirs below with your current
-# directory and run the following:
+# To generate a new dockerfile:
 #
-#     <clone spack and source spack/share/spack/setup-env.sh)
+#     <clone the spack repo if not already available>
+#     source spack/share/spack/setup-env.sh (setup scripts for most shells are also available)
+#     <cd to this repo>
+#     <fill in the /path/to/ in spack.yaml with the path you cloned the repo in>
 #     spack env create fnct-container-env spack.yaml
 #     spack env activate fnct-container-env
 #     spack containerize > Dockerfile
@@ -43,7 +45,7 @@ spack:
       compiler: [ gcc ]
   config:
     template_dirs:
-      - /home/rem/fre-nctools-container/template
+      - /path/to/fre-nctools-container/template
   # container specific options
   container:
     format: docker

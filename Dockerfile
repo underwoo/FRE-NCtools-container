@@ -85,7 +85,7 @@ LABEL "copyright"="2021, 2022, 2023 GFDL"
 LABEL "license"="LGPL v3+"
 LABEL "gov.noaa.gfdl.version"="5.0.0"
 LABEL "vendor"="Geophysical Fluid Dynamics Laboratory"
-LABEL "gov.noaa.gfdl.release-date"="2024-01-07"
+LABEL "gov.noaa.gfdl.release-date"="2024-01-10"
 ENTRYPOINT [ "/entrypoint.sh" ]
 CMD [ "/bin/bash" ]
 
