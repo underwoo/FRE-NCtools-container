@@ -31,6 +31,7 @@ RUN mkdir /opt/spack-environment \
 &&   echo '  - netcdf-c' \
 &&   echo '  - netcdf-fortran' \
 &&   echo '  - nccmp' \
+&&   echo '  - nco' \
 &&   echo '  concretizer:' \
 &&   echo '    unify: true' \
 &&   echo '  packages:' \
@@ -44,11 +45,14 @@ RUN mkdir /opt/spack-environment \
 &&   echo '  view: /opt/views/view') > /opt/spack-environment/spack.yaml
 
 # Install the software, remove unnecessary deps
-RUN cd /opt/spack-environment && spack env activate . && spack install --fail-fast && spack gc -y
+RUN cd /opt/spack-environment \
+  && spack env activate . \
+  && spack install --fail-fast \
+  && spack gc -y
 
 # Modifications to the environment that are necessary to run
-RUN cd /opt/spack-environment && \
-    spack env activate --sh -d . > activate.sh
+RUN cd /opt/spack-environment \
+  && spack env activate --sh -d . > activate.sh
 
 
 
@@ -75,17 +79,17 @@ RUN dnf update -y && dnf install -y epel-release && dnf update -y \
  && rm -rf /var/cache/dnf && dnf clean all
 
 # Install any needed pip packages
-RUN pip install git+https://github.com/adcroft/numpypi.git && \
-    pip install netCDF4 virtualenv
+RUN pip install git+https://github.com/adcroft/numpypi.git \
+  && pip install netCDF4 virtualenv
+
 # Set compilers for mpich wrappers
 ENV MPICH_FC=gfortran
 ENV MPICH_CC=gcc
 LABEL "maintainer"="Seth Underwood <Seth.Underwood@noaa.gov>"
-LABEL "copyright"="2021, 2022, 2023 GFDL"
+LABEL "copyright"="2021-2024 GFDL"
 LABEL "license"="LGPL v3+"
-LABEL "gov.noaa.gfdl.version"="5.0.0"
+LABEL "gov.noaa.gfdl.version"="5.1.0"
 LABEL "vendor"="Geophysical Fluid Dynamics Laboratory"
-LABEL "gov.noaa.gfdl.release-date"="2024-01-10"
+LABEL "gov.noaa.gfdl.release-date"="2024-10-11"
 ENTRYPOINT [ "/entrypoint.sh" ]
 CMD [ "/bin/bash" ]
-
